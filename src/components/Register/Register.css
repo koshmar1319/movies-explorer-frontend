@@ -1,0 +1,140 @@
+.auth__container {
+  max-width: 396px;
+  display: block;
+  margin: 0 auto;
+}
+
+.auth__logo {
+  display: block;
+  margin-top: 70px;
+}
+
+.auth__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 40px;
+}
+
+.auth__form {
+  max-width: 396px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.auth__text {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 12px;
+  color: #8B8B8B;
+  margin-top: 20px;
+}
+
+.auth__input {
+  padding: 0;
+  border: none;
+  background: #2F2F2F;
+  border-radius: 8px;
+  border-bottom: 1px solid #424242;
+  max-width: 396px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.auth__error {
+  display: none;
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 12px;
+  color: #EE3465;
+}
+
+.auth__low-block {
+  margin: 70px 0;
+}
+
+.auth__low-block_button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 396px;
+  height: 45px;
+  background: #4285F4;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.auth__low-block_button:hover {
+  opacity: 0.8;
+}
+
+.auth__low-block_text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8B8B8B;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.auth__low-block_link {
+  color: #4285F4;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.auth__low-block_link:hover {
+  color: rgba(66, 133, 244, 0.6);
+}
+
+@media (max-width: 770px) {
+  .auth__logo {
+    margin-top: 232px;
+  }
+  .auth__low-block {
+    margin: 70px 0 232px;
+  }
+}
+
+@media (max-width: 450px) {
+  .auth__container {
+    max-width: 260px;
+  }
+  .auth__logo {
+    margin: 56px auto;
+  }
+  .auth__title {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .auth__form {
+    margin-top: 80px;
+  }
+  .auth__low-block {
+    margin: 157px 0 30px;
+  }
+  .auth__low-block_button {
+    width: 260px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .auth__low-block_text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
