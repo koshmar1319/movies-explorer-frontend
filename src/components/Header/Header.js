@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import MobileMenu from '../MobileMenu/MobileMenu';
+import accountIcon from '../../images/account_icon.svg';
 import './Header.css';
 
 const Header = (props) => {
@@ -18,20 +19,30 @@ const Header = (props) => {
   return (
     <header className="header">
       <div className="header__container">
-        <Link to='/' className="header__block header__logo-link link">
+        <Link to='/' className={`header__block header__logo-link link`}>
           <img src={logo} alt="Логотип" className="header__logo" />
         </Link>
 
-        <div className="header__block header__block_movies">
-          <Link to='/movies' className="header__movies link">Фильмы</Link>
-          <Link to='/saved-movies' className="header__saved-movies link">Сохранённые фильмы</Link>
-        </div>
+        {props.isLoggedIn
+          ? <div className={`header__block header__block_movies`}>
+            <Link to='/movies' className={`header__movies link`}>Фильмы</Link>
+            <Link to='/saved-movies' className={`header__saved-movies link`}>Сохранённые фильмы</Link>
+          </div>
+          : ''
+        }
 
-        <div className="header__block header__block_auth">
-          <Link to='/profile' className="header__profile link">Аккаунт</Link>
-          <Link to='/signup' className="header__signup link">Регистрация</Link>
-          <Link to='/signin' className="header__signin link">Войти</Link>
-        </div>
+        {props.isLoggedIn
+          ? <div className="header__block header__block_auth">
+            <Link to='/profile' className="header__profile link">
+              <p className="header__profile_text">Аккаунт</p>
+              <img src={accountIcon} alt="Иконка аккаунта" className="header__profile_icon" />
+            </Link>
+          </div>
+          : <div className="header__block header__block_auth">
+            <Link to='/signup' className="header__signup link">Регистрация</Link>
+            <Link to='/signin' className="header__signin">Войти</Link>
+          </div>
+        }
 
         {isOpenSidebar
           ?

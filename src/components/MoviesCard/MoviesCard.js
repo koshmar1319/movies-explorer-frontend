@@ -2,7 +2,7 @@ import React from 'react';
 import cardImage from '../../images/card_picture.jpg';
 import './MoviesCard.css';
 
-const MoviesCard = () => {
+const MoviesCard = (props) => {
   const [toggle, setToggle] = React.useState(false);
 
   const toggleIt = () => {
@@ -16,7 +16,7 @@ const MoviesCard = () => {
           <h2 className="movie-card__title">33 слова о дизайне</h2>
           <p className="movie-card__duration">1ч 47м</p>
         </div>
-        <button onClick={toggleIt} className={`movie-card__button ${toggle ? 'movie-card__button_active' : ''}`}>
+        <button onClick={toggleIt} className={`movie-card__button ${props.saved ? 'movie-card__button_saved' : 'movie-card__button_not-saved'} ${toggle ? 'movie-card__button_active' : ''}`}>
         </button>
       </div>
       <a href="./movies" target='_blank' rel='noreferrer' className="movie-card__link">

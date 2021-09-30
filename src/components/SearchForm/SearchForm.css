@@ -20,6 +20,7 @@
 .search__label {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .search__input {
@@ -32,11 +33,11 @@
   background-repeat: no-repeat;
   background-position: left center;
   margin-left: 25px;
-  outline: none;
 }
 
 .search__input:focus {
   background: none;
+  outline: 1px solid #4285F4;
 }
 
 .search__input::placeholder {

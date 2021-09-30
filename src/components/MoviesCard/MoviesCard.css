@@ -29,7 +29,6 @@
 .movie-card__button {
   margin: 0;
   padding: 0;
-  background-image: url('../../images/icon_favorite.svg');
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -47,6 +46,14 @@
 
 .movie-card__button:hover {
   opacity: 0.6;
+}
+
+.movie-card__button_saved {
+  background-image: url('../../images/icon_favorite_saved.svg');
+}
+
+.movie-card__button_not-saved {
+  background-image: url('../../images/icon_favorite.svg');
 }
 
 .movie-card__button_active {

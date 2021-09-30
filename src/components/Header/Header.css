@@ -14,6 +14,14 @@
   width: 225px;
 }
 
+/* .header__block_movies {
+  display: none;
+} */
+
+.header__none {
+  display: none;
+}
+
 .header__movies {
   font-size: 13px;
   line-height: 18px;
@@ -42,10 +50,30 @@
   line-height: 12px;
   font-weight: 500;
   transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.header__profile_text {
+  margin: 0;
+  padding: 0;
+  margin-right: 7px;
+}
+
+.header__profile_icon {
+  background-color: #313131;
+  padding: 8px;
+  border-radius: 50px;
 }
 
 .header__profile:hover {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.header__block_auth {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .header__signup {
@@ -61,15 +89,24 @@
 }
 
 .header__signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 76px;
+  height: 32px;
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
   margin-left: 30px;
-  transition: color 0.3s;
+  background-color: #3DDC84;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s ease;
 }
 
 .header__signin:hover {
-  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(61, 220, 132, 0.8);
 }
 
 .header__burger-menu {
