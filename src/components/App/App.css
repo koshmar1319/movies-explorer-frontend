@@ -1,0 +1,26 @@
+.title {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  padding: 0 0 23px;
+  border-bottom: 1px solid #dadada;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.list {
+  list-style: none;
+}
+
+@media (max-width: 570px) {
+  .title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

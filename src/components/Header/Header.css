@@ -1,0 +1,154 @@
+.header {
+  margin: 18px 0;
+}
+
+.header__container {
+  max-width: 1140px;
+  margin: 0 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__block {
+  width: 225px;
+}
+
+/* .header__block_movies {
+  display: none;
+} */
+
+.header__none {
+  display: none;
+}
+
+.header__movies {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header__movies:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header__saved-movies {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-left: 16px;
+  transition: color 0.3s;
+}
+
+.header__saved-movies:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header__profile {
+  font-size: 13px;
+  line-height: 12px;
+  font-weight: 500;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.header__profile_text {
+  margin: 0;
+  padding: 0;
+  margin-right: 7px;
+}
+
+.header__profile_icon {
+  background-color: #313131;
+  padding: 8px;
+  border-radius: 50px;
+}
+
+.header__profile:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header__block_auth {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__signup {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: color 0.3s;
+}
+
+.header__signup:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header__signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 76px;
+  height: 32px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  margin-left: 30px;
+  background-color: #3DDC84;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+
+.header__signin:hover {
+  background-color: rgba(61, 220, 132, 0.8);
+}
+
+.header__burger-menu {
+  max-width: 28px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.header__burger-menu_inactive {
+  display: none;
+}
+
+.header__burger-line {
+  width: 28px;
+  height: 3px;
+  margin-bottom: 7px;
+  background-color: #fff;
+}
+
+.header__burger-line:last-child {
+  margin-bottom: 0;
+}
+
+
+@media (max-width: 950px) {
+  .header__container {
+    margin: 0 30px;
+  }
+  .header__block_movies {
+    display: none;
+  }
+  .header__block_auth {
+    display: none;
+  }
+  .header__burger-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 550px) {
+  .header__container {
+    margin: 0 14px;
+  }
+}

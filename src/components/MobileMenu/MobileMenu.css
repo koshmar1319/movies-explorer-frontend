@@ -1,0 +1,90 @@
+.sidebar {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  z-index: 3;
+}
+
+.sidebar_opened {
+  background-color: rgba(0, 0, 0, 0.3);
+  visibility: visible;
+}
+
+.sidebar__container {
+  max-width: 520px;
+  width: 100%;
+  height: 100vh;
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.sidebar__close {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 45px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 10px 25px 0 0;
+}
+
+.sidebar__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 105px;
+}
+
+.sidebar__item {
+  margin-top: 28px;
+  padding-bottom: 4px;
+}
+
+.sidebar__item:first-child {
+  margin-top: 0;
+}
+
+.sidebar__item:nth-child(2){
+  border-bottom: 2px solid #fff;
+}
+
+.sidebar__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.sidebar__account {
+  margin: auto auto 93px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar__account_text {
+  margin: 0;
+  padding: 0;
+  margin-right: 7px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 12px;
+  color: #fff;
+}
+
+.sidebar__account_icon {
+  background-color: #313131;
+  padding: 8px;
+  border-radius: 50px;
+}

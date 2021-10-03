@@ -1,0 +1,125 @@
+.technologies {
+  background-color: #272727;
+  padding: 100px 0;
+}
+
+.technologies__container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+.technologies__subtitle {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  line-height: 58px;
+  font-weight: 400;
+  margin-top: 90px;
+  text-align: center;
+}
+
+.technologies__text {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 491px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 26px;
+  text-align: center;
+}
+
+.technologies__list {
+  margin: 0;
+  padding: 0;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.technologies__item {
+  width: 90px;
+  height: 60px;
+  background-color: #303030;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 17px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.technologies__item:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.technologies__item:last-child {
+  margin-right: 0;
+}
+
+
+@media (max-width: 800px) {
+  .technologies {
+    padding: 90px 0;
+  }
+  .technologies__container {
+    padding: 0 50px;
+  }
+  .technologies__subtitle {
+    margin-top: 80px;
+  }
+  .technologies__text {
+    max-width: 460px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .technologies__list {
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
+  .technologies__item {
+    margin: 5px;
+  }
+  .technologies__item:last-child {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 570px) {
+  .technologies {
+    padding: 70px 0;
+  }
+  .technologies__container {
+    padding: 0 18px;
+  }
+  .technologies__subtitle {
+    margin-top: 60px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .technologies__text {
+    max-width: 292px;
+    margin-top: 24px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .technologies__list {
+    margin-top: 50px;
+    padding: 0 47px;
+  }
+  .technologies__item {
+    font-size: 12px;
+    line-height: 15px;
+    width: 84px;
+    height: 57px;
+  }
+}
+
+@media (max-width: 340px) {
+  .technologies__list {
+    justify-content: flex-start;
+  }
+}
