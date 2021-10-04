@@ -54,6 +54,7 @@ function App(props) {
           <Redirect from='*' to='/not-found' />
           <NotFound />
         </Route>
+        
 
       </Switch>
 
