@@ -56,14 +56,19 @@
   margin-top: 0;
 }
 
-.sidebar__item:nth-child(2){
-  border-bottom: 2px solid #fff;
-}
-
 .sidebar__link {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
+  padding-bottom: 4px;
+}
+
+.sidebar__link_active {
+  border-bottom: 2px solid #fff;
+}
+
+.sidebar__link_inactive {
+  border-bottom: none;
 }
 
 .sidebar__account {

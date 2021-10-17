@@ -3,7 +3,14 @@ import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import './Login.css';
 
-const Login = () => {
+const Login = (props) => {
+  const { values, errors, isValid, handleChange } = props.useFormAndValidation({});
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.handleLogin(values);
+  }
+
   return (
     <main className="auth">
       <div className="auth__container">
@@ -14,17 +21,57 @@ const Login = () => {
         <form className="auth__form">
           <label htmlFor="input-email" className="auth__label">
             <p className="auth__text">E-mail</p>
-            <input type="email" className="auth__input" id="input-email" placeholder="Введите email" required />
-            <span className="auth__error">Что-то пошло не так...</span>
+            <input
+              type="email"
+              className={`auth__input ${errors.email ? 'auth__input_error' : ''}`}
+              id="input-email"
+              placeholder="Введите email"
+              name="email"
+              value={values.email || ''}
+              onChange={handleChange}
+              disabled={props.state.disableInputs}
+              required />
+            {
+              errors.email
+                ? <span className="auth__error">{errors.email}</span>
+                : ''
+            }
           </label>
           <label htmlFor="input-password" className="auth__label">
             <p className="auth__text">Пароль</p>
-            <input type="password" className="auth__input" id="input-password" placeholder="Введите пароль" required />
-            <span className="auth__error">Что-то пошло не так...</span>
+            <input
+              type="password"
+              className={`auth__input ${errors.password ? 'auth__input_error' : ''}`}
+              id="input-password"
+              placeholder="Введите пароль"
+              name="password"
+              value={values.password || ''}
+              onChange={handleChange}
+              disabled={props.state.disableInputs}
+              required />
+            {
+              errors.password
+                ? <span className="auth__error">{errors.password}</span>
+                : ''
+            }
           </label>
 
+          {props.errorText
+            ? <span className="auth__low-block_span">{props.errorText}</span>
+            : ''
+          }
+
           <div className="auth__low-block auth__low-block_login">
-            <button className="auth__low-block_button">Войти</button>
+            {props.errorText
+              ? <span className="auth__low-block_span">{props.errorText}</span>
+              : ''
+            }
+            <button
+              className="auth__low-block_button"
+              type="submit"
+              onClick={handleSubmit}
+              disabled={!isValid || props.state.disableInputs}
+            >Войти</button>
             <p className="auth__low-block_text">
               Ещё не зарегистрированы? <Link className="auth__low-block_link" to="/signup">Регистрация</Link>
             </p>
