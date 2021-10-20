@@ -77,6 +77,7 @@ const SearchForm = (props) => {
               id="switch"
               className="switch__input"
               checked={stateCheckBox}
+              onChange={handleSubmit}
             />
             <span onClick={handleChangeCheckBox} className="switch__span_slider switch__span_round"></span>
           </label>
