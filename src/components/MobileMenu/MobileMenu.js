@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import accountIcon from '../../images/account_icon.svg';
 import './MobileMenu.css';
 
@@ -11,20 +11,32 @@ const MobileMenu = (props) => {
         <nav className="sidebar__navigation">
           <ul className="list sidebar__list">
             <li className="sidebar__item">
-              <Link className="link sidebar__link" to="/">Главная</Link>
+              <NavLink
+                exact to="/"
+                className="link sidebar__link"
+                activeClassName={`${props.isOpenSidebar ? 'sidebar__link_active' : ''}`}
+              >Главная</NavLink>
             </li>
             <li className="sidebar__item">
-              <Link className="link sidebar__link" to="/movies">Фильмы</Link>
+              <NavLink
+                to="/movies"
+                className="link sidebar__link"
+                activeClassName={`${props.isOpenSidebar ? 'sidebar__link_active' : ''}`}
+              >Фильмы</NavLink>
             </li>
             <li className="sidebar__item">
-              <Link className="link sidebar__link" to="/saved-movies">Сохранённые фильмы</Link>
+              <NavLink
+                to="/saved-movies"
+                className="link sidebar__link"
+                activeClassName={`${props.isOpenSidebar ? 'sidebar__link_active' : ''}`}
+              >Сохранённые фильмы</NavLink>
             </li>
           </ul>
         </nav>
-        <Link to="/profile" className="sidebar__account">
+        <NavLink to="/profile" className="sidebar__account">
           <p className="sidebar__account_text">Аккаунт</p>
           <img src={accountIcon} alt="Иконка аккаунта" className="sidebar__account_icon" />
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
 import React from 'react';
 import './MoviesMore.css';
 
-const MoviesMore = () => {
+const MoviesMore = (props) => {
   return (
     <div className="movies__more">
-      <button className="movies__more-button">Ещё</button>
+      <button onClick={props.handleAddMovies} className="movies__more-button">Ещё</button>
     </div>
   );
 };

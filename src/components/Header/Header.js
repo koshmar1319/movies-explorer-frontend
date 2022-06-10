@@ -24,36 +24,32 @@ const Header = (props) => {
         </Link>
 
         {props.isLoggedIn
-          ? <div className={`header__block header__block_movies`}>
-            <Link to='/movies' className={`header__movies link`}>Фильмы</Link>
-            <Link to='/saved-movies' className={`header__saved-movies link`}>Сохранённые фильмы</Link>
-          </div>
-          : ''
-        }
-
-        {props.isLoggedIn
-          ? <div className="header__block header__block_auth">
-            <Link to='/profile' className="header__profile link">
-              <p className="header__profile_text">Аккаунт</p>
-              <img src={accountIcon} alt="Иконка аккаунта" className="header__profile_icon" />
-            </Link>
-          </div>
-          : <div className="header__block header__block_auth">
+          ? (
+            <>
+              <div className={`header__block header__block_movies`}>
+                <Link to='/movies' className={`header__movies link`}>Фильмы</Link>
+                <Link to='/saved-movies' className={`header__saved-movies link`}>Сохранённые фильмы</Link>
+              </div>
+              <div className="header__block header__block_auth">
+                <Link to='/profile' className="header__profile link">
+                  <p className="header__profile_text">Аккаунт</p>
+                  <img src={accountIcon} alt="Иконка аккаунта" className="header__profile_icon" />
+                </Link>
+              </div>
+              <MobileMenu closeSideBar={closeSideBar} isOpenSidebar={isOpenSidebar} />
+              <div className={`${isOpenSidebar ? 'header__burger-menu_inactive' : 'header__burger-menu'}`} onClick={showSideBar}>
+                <div className="header__burger-line"></div>
+                <div className="header__burger-line"></div>
+                <div className="header__burger-line"></div>
+              </div>
+            </>
+          )
+          : <div className="header__block header__block_no-auth">
             <Link to='/signup' className="header__signup link">Регистрация</Link>
             <Link to='/signin' className="header__signin">Войти</Link>
           </div>
         }
 
-        {isOpenSidebar
-          ?
-          <MobileMenu closeSideBar={closeSideBar} isOpenSidebar={isOpenSidebar} />
-          :
-          <div className={`${isOpenSidebar ? 'header__burger-menu_inactive' : 'header__burger-menu'}`} onClick={showSideBar}>
-            <div className="header__burger-line"></div>
-            <div className="header__burger-line"></div>
-            <div className="header__burger-line"></div>
-          </div>
-        }
       </div>
     </header>
   );
